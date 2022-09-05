@@ -3,7 +3,7 @@ const axios = require("axios").default
 const express = require("express")
 const app = express()
 const cors = require("cors")
-require("dotenv").config //hides RapidAPI key
+require("dotenv").config() //hides RapidAPI key
 app.use(cors())
 
 app.get("/flights", (req, res) => {
@@ -14,17 +14,15 @@ app.get("/flights", (req, res) => {
     'X-RapidAPI-Key': process.env.rapid_api_key,
     'X-RapidAPI-Host': 'madrid-barajas-airport-flights.p.rapidapi.com'
   }
-};
+}
 
 axios.request(options).then(function (response) {
 	console.log(response.data);
-    res.json(response.data)
+    res.json(response.data.slice(0, 10))
 }).catch(function (error) {
 	console.error(error);
-});
 })
-
-
+})
 
 
 
