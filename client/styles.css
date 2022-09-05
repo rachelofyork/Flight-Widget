@@ -7,10 +7,24 @@ body {
     align-items: center;
     background-color: black;
     text-align: center;
-        font-family: 'Ubuntu Condensed', sans-serif;
-        color: rgb(240, 240, 240);
-        padding: 50px;
-        font-size: 35px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: rgb(240, 240, 240);
+    padding: 10px;
+    font-size: 35px;
+}
+
+h1 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 5px;
+    padding: 0;
+}
+
+.api-link {
+    color: rgb(240, 240, 240);
 }
 
 table {
